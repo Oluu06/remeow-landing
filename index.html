@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ReMeow ($REMEOW) – The Meme Has Been Reloaded</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="scroll-progress"></div>
+  <div id="particles-bg"></div>
+  <header class="hero">
+    <img src="https://placekitten.com/400/400" alt="ReMeow Cat" id="cat-img" class="cat-img">
+    <h1>🚀 $REMEOW – The Meme Has Been Reloaded.</h1>
+    <p class="subtext">He was rugged. He clawed back. Now he's here to nap on moon rocks.</p>
+    <a href="https://app.uniswap.org/#/swap?outputCurrency=YOURTOKENADDRESS" target="_blank" class="buy-btn">BUY NOW</a>
+  </header>
+
+  <section class="story">
+    <div class="story-block" id="story-block">
+      <!-- Typewriter effect will inject text here -->
+    </div>
+  </section>
+
+  <!-- GAME SECTION -->
+  <section class="game-section">
+    <h2>🎮 Catch the $REMEOW Game</h2>
+    <p class="game-description">Help ReMeow collect tokens! Click the falling $REMEOW coins to earn points!</p>
+    <div class="game-stats">
+      <div class="stat">Score: <span id="game-score">0</span></div>
+      <div class="stat">Time: <span id="game-time">30</span>s</div>
+      <div class="stat">Level: <span id="game-level">1</span></div>
+      <div class="stat">Lives: <span id="game-lives">9</span> ❤️</div>
+    </div>
+    <div class="game-container" id="game-container">
+      <div class="game-cat" id="game-cat">🐱</div>
+      <button class="game-btn" id="start-game-btn">START GAME</button>
+      <div class="game-over" id="game-over">
+        <h3>Game Over!</h3>
+        <p>Final Score: <span id="final-score">0</span></p>
+        <p class="achievement" id="achievement"></p>
+        <button class="game-btn" id="restart-game-btn">PLAY AGAIN</button>
+      </div>
+    </div>
+    <div class="game-leaderboard">
+      <h3>🏆 High Scores</h3>
+      <ol id="leaderboard">
+        <li>Anonymous: 2850 points</li>
+        <li>CryptoKitty: 2340 points</li>
+        <li>MoonCat: 1990 points</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="tokenomics">
+    <h2>Tokenomics</h2>
+    <ul>
+      <li>💰 0% Taxes</li>
+      <li>🐾 100% Community-Owned</li>
+      <li>🔐 Liquidity Locked</li>
+      <li>🔥 420,690,000 Total Supply</li>
+    </ul>
+  </section>
+
+  <section class="roadmap">
+    <h2>Roadmap</h2>
+    <ol>
+      <li>Phase 1: Meme resurrection</li>
+      <li>Phase 2: Elon accidentally tweets “meow”</li>
+      <li>Phase 3: LP locked, community unlocked</li>
+      <li>Phase 4: NFT laser collars for top holders</li>
+      <li>Phase 5: ReMeow takes over CatCoin</li>
+      <li>Phase 6: Moon nap</li>
+    </ol>
+  </section>
+
+  <section class="token-address">
+    <span>Token Address: <span id="token-address">0xABC123...</span> <button id="copy-btn">📋</button></span>
+    <span id="copy-tooltip" class="tooltip">Copied!</span>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

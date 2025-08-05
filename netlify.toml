@@ -1,0 +1,41 @@
+[build]
+  # Directorio donde están los archivos web
+  publish = "."
+  
+  # Comando de build (no necesario para sitio estático)
+  command = ""
+
+[build.environment]
+  # Configuración del entorno
+  NODE_VERSION = "18"
+
+# Configuración de headers para mejor performance
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Configuración para archivos estáticos
+[[headers]]
+  for = "*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+# Redirects (opcional)
+[[redirects]]
+  from = "/www/*"
+  to = "/:splat"
+  status = 301

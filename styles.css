@@ -20,11 +20,11 @@ body {
   position: relative;
   z-index: 2;
   text-align: center;
-  padding: 5rem 2rem 3rem 2rem;
+  padding: 3rem 2rem 2rem 2rem; /* Reducido de 5rem 2rem 3rem 2rem a 3rem 2rem 2rem 2rem */
   background: linear-gradient(180deg, rgba(255,255,255,0.03) 0%, rgba(0,0,0,0.1) 100%);
   backdrop-filter: blur(10px);
   border-radius: 0 0 40px 40px;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem; /* Reducido de 2rem a 1.5rem */
 }
 
 .cat-img {
@@ -96,22 +96,22 @@ h1 {
 }
 
 .story {
-  margin: 4rem auto;
-  max-width: 900px;
-  padding: 3rem 2.5rem;
+  margin: 2rem auto; /* Reducido de 4rem a 2rem */
+  max-width: 700px; /* Reducido de 900px a 700px */
+  padding: 2rem 1.5rem; /* Reducido de 3rem 2.5rem a 2rem 1.5rem */
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(20px);
-  border-radius: 24px;
+  border-radius: 20px; /* Reducido de 24px a 20px */
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   position: relative;
   z-index: 2;
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 .story-block {
-  font-size: 1.3rem;
+  font-size: 1.1rem; /* Reducido de 1.3rem a 1.1rem */
   color: #e8e8e8;
-  min-height: 120px;
-  line-height: 1.8;
+  min-height: 80px; /* Reducido de 120px a 80px */
+  line-height: 1.5; /* Reducido de 1.6 a 1.5 */
   letter-spacing: 0.01em;
   font-family: 'Georgia', serif;
   white-space: pre-line;
@@ -119,6 +119,31 @@ h1 {
   transform: translateY(30px);
   transition: opacity 1s, transform 1s;
   text-align: center;
+}
+
+.story-block h3 {
+  color: #00ff88;
+  font-size: 1.5rem; /* Reducido de 1.8rem a 1.5rem */
+  margin-bottom: 1rem; /* Reducido de 1.5rem a 1rem */
+  text-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+  font-style: italic;
+  letter-spacing: 0.02em;
+}
+
+.story-block p {
+  margin: 0.2rem 0; /* Reducido de 0.3rem a 0.2rem */
+}
+
+.story-block p:first-of-type {
+  margin-top: 0;
+}
+
+.story-block p:last-child {
+  margin-bottom: 0;
+}
+
+.story-block br {
+  line-height: 1.8; /* Reducido de 2.2 a 1.8 */
 }
 .story-block.visible {
   opacity: 1;
@@ -131,8 +156,8 @@ h1 {
   backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 24px;
-  margin: 4rem auto;
-  padding: 3rem 2rem;
+  margin: 2rem auto; /* Reducido de 4rem a 2rem */
+  padding: 2rem 1.5rem; /* Reducido de 3rem 2rem a 2rem 1.5rem */
   max-width: 900px;
   text-align: center;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
@@ -474,7 +499,7 @@ h1 {
 }
 
 /* Enhanced Section Animations */
-.tokenomics, .roadmap, .game-section, .token-address, .story {
+.tokenomics, .features, .game-section, .token-address, .story {
   animation: fadeInLeft 0.8s ease-out;
   animation-fill-mode: both;
 }
@@ -665,13 +690,13 @@ h1 {
 }
 
 .tokenomics {
-  margin: 4rem auto;
+  margin: 2rem auto; /* Reducido de 4rem a 2rem */
   max-width: 700px;
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(20px);
   border-radius: 24px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-  padding: 3rem 2rem;
+  padding: 2rem 1.5rem; /* Reducido de 3rem 2rem a 2rem 1.5rem */
   z-index: 2;
   position: relative;
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -709,19 +734,19 @@ h1 {
   transform: translateX(5px);
 }
 
-.roadmap {
-  margin: 4rem auto;
+.features {
+  margin: 2rem auto;
   max-width: 700px;
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(20px);
   border-radius: 24px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-  padding: 3rem 2rem;
+  padding: 2rem 1.5rem;
   z-index: 2;
   position: relative;
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
-.roadmap h2 {
+.features h2 {
   color: #ffffff;
   font-size: 2rem;
   margin-bottom: 2rem;
@@ -732,55 +757,35 @@ h1 {
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.roadmap ol {
+.features ul {
   padding-left: 0;
-  counter-reset: roadmap;
+  list-style: none;
 }
-.roadmap li {
+.features li {
   font-size: 1.1rem;
-  margin: 1.2rem 0;
+  margin: 1rem 0;
   color: #e0e0e0;
   padding: 1rem 1.5rem;
   background: rgba(255, 255, 255, 0.05);
   border-radius: 12px;
-  position: relative;
-  padding-left: 3rem;
-  counter-increment: roadmap;
-  font-weight: 400;
   transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.roadmap li::before {
-  content: counter(roadmap);
-  position: absolute;
-  left: 1rem;
-  top: 50%;
-  transform: translateY(-50%);
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  width: 1.5rem;
-  height: 1.5rem;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.8rem;
-  font-weight: 600;
-}
-
-.roadmap li:hover {
+.features li:hover {
+  transform: translateY(-2px);
   background: rgba(255, 255, 255, 0.08);
-  transform: translateX(5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .token-address {
-  margin: 4rem auto 5rem auto;
+  margin: 2rem auto 3rem auto; /* Reducido de 4rem auto 5rem auto a 2rem auto 3rem auto */
   max-width: 600px;
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(20px);
   border-radius: 20px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-  padding: 2rem 1.5rem;
+  padding: 1.5rem 1rem; /* Reducido de 2rem 1.5rem a 1.5rem 1rem */
   font-size: 1.1rem;
   color: #ffffff;
   text-align: center;

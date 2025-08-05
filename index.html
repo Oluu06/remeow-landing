@@ -18,20 +18,14 @@
 <body>
   <div class="scroll-progress"></div>
   
-  <div class="stars"></div>
-  <div class="particles"></div>
+  <div id="particles-bg"></div>
 
-  <section class="hero">
-    <h1>ReMeow <span>($REMEOW)</span></h1>
-    <p class="subtitle">The Meme Has Been Reloaded</p>
-    <div class="cat-container">
-      <img src="assets/RealisticCat.png" alt="ReMeow Cat" class="cat-image">
-    </div>
-    <div class="cta-buttons">
-      <button id="buy-button" class="btn btn-primary">Buy $REMEOW</button>
-      <button id="game-button" class="btn btn-secondary">Play ReMeow Game</button>
-    </div>
-  </section>
+  <header class="hero">
+    <img src="assets/RealisticCat.png" alt="ReMeow Cat" id="cat-img" class="cat-img">
+    <h1>🚀 $REMEOW – The Meme Has Been Reloaded.</h1>
+    <p class="subtext">He was rugged. He clawed back. Now he's here to nap on moon rocks.</p>
+    <a href="https://app.uniswap.org/#/swap?outputCurrency=YOURTOKENADDRESS" target="_blank" class="buy-btn">BUY NOW</a>
+  </header>
 
   <section class="story">
     <h2>The Rebirth of a Meme</h2>
@@ -48,33 +42,33 @@
     </div>
   </section>
 
-  <section class="game">
-    <h2>Play ReMeow Runner</h2>
-    <div class="game-container">
-      <canvas id="gameCanvas" width="800" height="400"></canvas>
-      <div class="game-stats">
-        <div class="stat">
-          <span class="stat-label">Score:</span>
-          <span id="score">0</span>
-        </div>
-        <div class="stat">
-          <span class="stat-label">Lives:</span>
-          <span id="lives">9</span>
-        </div>
-        <div class="stat">
-          <span class="stat-label">Level:</span>
-          <span id="level">1</span>
-        </div>
-        <div class="stat">
-          <span class="stat-label">Coins:</span>
-          <span id="coins">0</span>
-        </div>
+  <!-- GAME SECTION -->
+  <section class="game-section">
+    <h2>🎮 Catch the $REMEOW Game</h2>
+    <p class="game-description">Help ReMeow collect tokens! Click the falling $REMEOW coins to earn points!</p>
+    <div class="game-stats">
+      <div class="stat">Score: <span id="game-score">0</span></div>
+      <div class="stat">Time: <span id="game-time">30</span>s</div>
+      <div class="stat">Level: <span id="game-level">1</span></div>
+      <div class="stat">Lives: <span id="game-lives">9</span> ❤️</div>
+    </div>
+    <div class="game-container" id="game-container">
+      <div class="game-cat" id="game-cat">🐱</div>
+      <button class="game-btn" id="start-game-btn">START GAME</button>
+      <div class="game-over" id="game-over">
+        <h3>Game Over!</h3>
+        <p>Final Score: <span id="final-score">0</span></p>
+        <p class="achievement" id="achievement"></p>
+        <button class="game-btn" id="restart-game-btn">PLAY AGAIN</button>
       </div>
-      <div class="game-controls">
-        <button id="startGame" class="btn btn-primary">Start Game</button>
-        <button id="pauseGame" class="btn btn-secondary">Pause</button>
-        <p class="game-instructions">Press SPACE to jump, collect coins, avoid obstacles!</p>
-      </div>
+    </div>
+    <div class="game-leaderboard">
+      <h3>🏆 High Scores</h3>
+      <ol id="leaderboard">
+        <li>Anonymous: 2850 points</li>
+        <li>CryptoKitty: 2340 points</li>
+        <li>MoonCat: 1990 points</li>
+      </ol>
     </div>
   </section>
 
